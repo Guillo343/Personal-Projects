@@ -1,0 +1,223 @@
+:root{
+   --blanco:var(--blanco) #ffffff;
+   --negro:var(--negro) #212121;
+   --primario:var(--primario) #ffc107;
+   --grisClaro:var(var(--grisClaro)) #dfe9f3
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    scroll-snap-type: y mandatory;
+  }
+body{
+    font-size: 16px;
+    font-family: 'Dosis', sans-serif;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+}
+section{
+    justify-content: center;
+}
+.servicio, .navegacion-principal, .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+.titulo {
+    font-size: 3.8rem;
+    text-align: center;
+
+
+}
+.sombra{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(184,184,184,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(184,184,184,1);
+    box-shadow: 10px 10px 5px 0px rgba(184,184,184,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+}
+.titulo span{
+    font-size: 2rem;
+}
+.contenedor {
+   max-width: 120rem;
+    margin: 0 auto;
+}
+    
+
+.navegacion-principal {
+    background-color: #ffc107;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.navegacion-principal a{
+    color:var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    font-weight: 700;
+    text-align: center;
+}
+nav{
+    display: block;
+}
+
+.navegacion-principal a:hover{
+    background-color: #ffffff;
+}
+@media (min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.hero {
+    background-image: url(https://cdn.pixabay.com/photo/2016/10/29/09/53/abstract-1780277_960_720.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+}
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.blanco {
+    color: white;
+}
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+.w-100 {
+    width: 100%;
+}
+.flex {
+    display: flex;
+}
+.alinear-derecha {
+    justify-content: flex-end;
+}
+@media (min-width: 768px) {
+    .w-100{
+        width: auto;
+    }
+}
+.boton{
+    background-color: #ffc107;
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    border: none;
+    text-align: center;
+    justify-content: flex-end;
+}
+.boton:hover{
+    cursor: pointer;
+}
+@media (min-width: 768px){
+    .boton{
+        width: auto;
+    }
+}
+@media (min-width: 768px){
+    .servicios{
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+}
+}
+.servicio h3{
+    color: rgb(57, 74, 223);
+    font-weight: normal;
+}
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio p{
+    line-height: 2;
+    text-align: center;
+}
+.servicio .iconos{
+    border-radius: 50%;
+    background-color: #ffc107;
+    height: 15rem;
+    width: 15rem;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.formulario {
+    background-color: #B5B2B2;
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color:var(--primario)
+}
+@media (min-width:768px){
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns:50% 50%;
+        column-gap: 1rem;
+        grid-template-rows: auto auto 20rem;
+     }
+
+     .campos:nth-child(3),
+     .campos:nth-child(4) {
+        grid-column: 1/3;
+
+     }
+}
+.campos {
+    margin-bottom: 1rem;
+}
+.campo:nth-child(3){
+    grid-column: 1/3;
+}
+.campos label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campos textarea{
+    height: 20rem;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.footer {
+    text-align:center;
+}
